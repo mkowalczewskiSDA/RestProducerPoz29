@@ -29,6 +29,10 @@ public class TaskServiceImpl implements TaskService {
         return returnList;
     }
 
+    //pobieramy z bazy danych wszystkie dane taska,
+    //ponieważ wraz z requestem przychodzi do nas tylko
+    //completed i id, gdybyśmy dokonali zapisu na bazie danych
+    //to ustawilibyśmy null na innych polach
     @Override
     public TaskDTO update(Integer id, TaskDTO taskDTO) {
         Task task = taskRepository.getById(id);

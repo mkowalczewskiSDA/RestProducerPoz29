@@ -20,6 +20,11 @@ public class TaskController {
         return test;
     }
 
+    //przyjmujemy tutaj request Restowy - z ciałem np:
+    // {
+    //  "completed": false,
+    //  "id": 2
+    //}
     @PutMapping("/{id}")
     public TaskDTO update(@PathVariable Integer id, @RequestBody TaskDTO dto) {
         return taskService.update(id, dto);
