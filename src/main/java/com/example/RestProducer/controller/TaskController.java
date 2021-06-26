@@ -18,7 +18,8 @@ public class TaskController {
 
     @GetMapping
     public List<TaskDTO> findAll() {
-        return taskService.findAll();
+        List<TaskDTO> test = taskService.findAll();
+        return test;
     }
 
 }

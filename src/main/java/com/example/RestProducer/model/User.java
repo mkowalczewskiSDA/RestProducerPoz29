@@ -1,15 +1,21 @@
 package com.example.RestProducer.model;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 import java.util.Set;
 
-@Data
 @Entity
 @Table
+@Data
+@NoArgsConstructor
+@ToString(exclude = "tasks")
+@EqualsAndHashCode(exclude = "tasks")
 public class User {
 
     @Id
@@ -19,8 +25,8 @@ public class User {
     @Column
     @NotNull
     private String firstName;
-    @NotNull
     @Column
+    @NotNull
     private String lastName;
     @Column
     @NotNull
@@ -28,4 +34,5 @@ public class User {
     private String email;
     @OneToMany(mappedBy = "user")
     private Set<Task> tasks;
+
 }
