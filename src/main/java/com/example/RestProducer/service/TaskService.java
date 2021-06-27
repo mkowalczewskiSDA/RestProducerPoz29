@@ -11,4 +11,6 @@ public interface TaskService {
     TaskDTO update(Integer id, TaskDTO taskDTO);
 
     void delete(Integer id);
+
+    TaskDTO create(TaskDTO taskDTO);
 }

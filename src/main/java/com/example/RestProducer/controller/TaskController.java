@@ -34,4 +34,9 @@ public class TaskController {
     public void delete(@PathVariable Integer id) {
         taskService.delete(id);
     }
+
+    @PostMapping
+    public TaskDTO create(TaskDTO taskDTO) {
+        return taskService.create(taskDTO);
+    }
 }
