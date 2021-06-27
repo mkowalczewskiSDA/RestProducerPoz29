@@ -30,4 +30,8 @@ public class TaskController {
         return taskService.update(id, dto);
     }
 
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id) {
+        taskService.delete(id);
+    }
 }

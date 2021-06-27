@@ -40,4 +40,9 @@ public class TaskServiceImpl implements TaskService {
         taskRepository.save(task);
         return modelMapper.map(task, TaskDTO.class);
     }
+
+    @Override
+    public void delete(Integer id) {
+        taskRepository.deleteById(id);
+    }
 }

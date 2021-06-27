@@ -9,4 +9,6 @@ public interface TaskService {
     List<TaskDTO> findAll();
 
     TaskDTO update(Integer id, TaskDTO taskDTO);
+
+    void delete(Integer id);
 }
